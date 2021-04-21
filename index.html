@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Countdown Timer
+        </title>
+        <link rel="shortcut icon" href="https://ps.w.org/timer-countdown/assets/icon-256x256.png?rev=2300266">
+    </head>
+    <body style="font-family: sans-serif; background-color: grey;">
+        <input type="number" placeholder="Time (In Seconds)" id="time">
+        <h1 id="output">0 Seconds</h1>
+        <button onclick="start()">Start</button>
+    </body>
+    <script>
+        function start() {
+        var timeleft = document.getElementById("time").value;
+        var output = document.getElementById("output");
+        setInterval(removeTime, 1000)
+        function removeTime() {
+            timeleft--
+            output.innerHTML = timeleft + " Seconds";
+            if(timeleft == "0") {
+            if(alert("Time Is Over!")) {
+    history.go(0);
+}
+}
+        }
+        }
+    </script>
+</html>
